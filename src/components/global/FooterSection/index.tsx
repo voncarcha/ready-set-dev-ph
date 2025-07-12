@@ -3,7 +3,7 @@ import Logo from '../Logo';
 
 const FooterSection = () => {
   return (
-    <footer className="w-full border-t border-[#ddd] bg-primary px-[15px]">
+    <footer className="w-full border-t border-[rgba(255,255,255,0.1)] bg-primary px-[15px]">
       <div className="mx-auto flex max-w-[1200px] flex-col  items-center justify-between gap-[20px] md:flex-row">
         <span className="w-[150px]">
           <Logo />
