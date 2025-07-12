@@ -16,7 +16,7 @@ const Header = () => {
             Dev That Delivers.
           </h1>
           <Link
-            href="#contact"
+            href="/#contact"
             className="bg-gradient-app max-w-[250px] hover:bg-gradient-app-hover mt-[30px] flex items-center justify-center h-[50px] rounded-[10px] px-[40px] text-[20px] font-bold text-white"
           >
             Get in touch

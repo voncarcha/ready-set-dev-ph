@@ -88,13 +88,6 @@ export default function contactFormEmailToCompany(data: any) {
             </td>
         </tr>
         <tr>
-            <td style="font-size: 16px; text-align: start; width: 100%">
-                <p class="content">
-                    Info:
-                </p>
-            </td>
-        </tr>
-        <tr>
             <td>
                 <table>
                     <tr>
@@ -110,7 +103,6 @@ export default function contactFormEmailToCompany(data: any) {
                         <td>${data.message}</td>
                     </tr>
                 </table>
-
             </td>
         </tr>
     </table>

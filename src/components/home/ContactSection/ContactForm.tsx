@@ -26,6 +26,7 @@ const ContactForm = () => {
     const payload = data;
 
     const response = await sendEmail(payload);
+
     if (response.success) {
       setContactSuccess(true);
       reset();
@@ -56,7 +57,7 @@ const ContactForm = () => {
       />
       <FormTextField
         type="textarea"
-        placeholder="Message"
+        placeholder="*Message"
         name="message"
         register={register}
         error={errors.message}
