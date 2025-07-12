@@ -2,9 +2,9 @@
 
 import axios from 'axios';
 
-export const zeptoMailApi = axios.create({
-  baseURL: 'https://api.zeptomail.eu/v1.1/email',
+export const emailClient = axios.create({
+  baseURL: 'https://api.resend.com',
   headers: {
-    Authorization: `Zoho-enczapikey ${process.env.ZEPTO_MAIL_API_KEY}`,
+    Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
   },
 });

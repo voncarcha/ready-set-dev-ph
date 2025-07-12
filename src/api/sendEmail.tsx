@@ -1,44 +1,37 @@
 'use server';
 
-import { zeptoMailApi } from '@/api';
+import { Resend } from 'resend';
 import contactFormEmailToCompany from '@/templates/contactFormEmailToCompany';
 import { ContactFormData, ContactFormSchema } from '@/types';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function sendEmail(contactFormData: ContactFormData) {
   const validatedSchema = ContactFormSchema.safeParse(contactFormData);
 
   if (!validatedSchema.success) {
     return {
-      message: `Something went wrong. Please email info@php.je for concerns. Thank you!`,
+      message: `Something went wrong.`,
     };
   }
 
-  const dataToCompany = {
-    from: {
-      address: process.env.MAIL_CONTACT_FORM_RECEIVER_ADDRESS_FROM,
-    },
-    to: [
-      {
-        email_address: {
-          address: process.env.MAIL_CONTACT_FORM_RECEIVER_ADDRESS_TO,
-        },
-      },
-    ],
-    subject: process.env.MAIL_CONTACT_FORM_SUBJECT,
-    htmlbody: contactFormEmailToCompany(contactFormData),
-  };
-
   try {
-    await zeptoMailApi.post('', dataToCompany);
-
+    const response = await resend.emails.send({
+      from: 'ReadySetDev <onboarding@resend.dev>',
+      to: ['voncarcha@gmail.com'],
+      subject: 'Contact Form Submission',
+      html: contactFormEmailToCompany(contactFormData),
+    });
+    console.log(response);
     return {
       message: 'Message Sent. Thank you!',
       success: true,
     };
   } catch (error: any) {
     if (error.response.data.error.message) {
+      console.log(error.response);
       return {
-        message: error.response.data.error.message,
+        message: `Something went wrong. Please try again later. Thank you!`,
         success: false,
       };
     }

@@ -1,18 +1,29 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="min-h-[900px] relative flex px-[15px] w-full justify-center bg-secondary bg-[url('/images/home/grid.png')] bg-cover bg-center bg-no-repeat">
-      <article className="relative z-20 flex items-center justify-center gap-[50px] max-w-[1200px] mx-auto ">
-        <section className='max-w-[500px]'>
-          <h1 className="text-data-shadow leading-[1.1] text-[90px] font-semibold text-white" data-shadow="Coding Saves Lives">
-            Coding Saves Lives
+    <header className="relative flex min-h-[900px] w-full justify-center bg-secondary bg-[url('/images/home/grid.png')] bg-cover bg-center bg-no-repeat px-[15px]">
+      <article className="relative z-20 mx-auto flex max-w-[1200px] flex-col items-center justify-center md:gap-[50px] lg:flex-row">
+        <section className="md:flex-1 pt-[180px] lg:pt-0">
+          <h1 className="mb-[10px] text-[35px] md:text-[60px] font-semibold leading-[1.1] text-white">
+            Ready To Build.
           </h1>
-          <p className="text-white text-[24px] mt-[10px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          <h1 className="mb-[10px] text-[35px] md:text-[60px] font-semibold leading-[1.1] text-white">
+            Set to Launch.
+          </h1>
+          <h1 className="text-[35px] md:text-[60px] font-semibold leading-[1.1] text-white">
+            Dev That Delivers.
+          </h1>
+          <Link
+            href="#contact"
+            className="bg-gradient-app max-w-[250px] hover:bg-gradient-app-hover mt-[30px] flex items-center justify-center h-[50px] rounded-[10px] px-[40px] text-[20px] font-bold text-white"
+          >
+            Get in touch
+          </Link>
+          {/* <p className="mt-[10px] text-[24px] text-white">Ready, Set, Dev!</p> */}
         </section>
-        <picture className="flex items-center justify-center max-w-[680px]">
+        <picture className="flex max-w-[680px] flex-1 items-center justify-center">
           <Image
             src="/images/home/hero-1.png"
             alt="bg-access"

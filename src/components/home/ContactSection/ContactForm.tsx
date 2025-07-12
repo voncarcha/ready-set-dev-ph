@@ -6,7 +6,7 @@ import { ContactFormData } from '@/types';
 import { ContactFormSchema } from '@/types';
 import sendEmail from '@/api/sendEmail';
 import { zodResolver } from '@hookform/resolvers/zod';
-import FormTextField from '@/components/FormTextField';
+import FormTextField from '@/components/global/FormTextField';
 import { useState } from 'react';
 
 const ContactForm = () => {
@@ -15,6 +15,7 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(ContactFormSchema),
   });
@@ -27,11 +28,13 @@ const ContactForm = () => {
     const response = await sendEmail(payload);
     if (response.success) {
       setContactSuccess(true);
+      reset();
     } else {
-      alert(response.message);
+      alert(response?.message || 'Something went wrong');
     }
     setLoading(false);
   };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -39,7 +42,7 @@ const ContactForm = () => {
     >
       <FormTextField
         type="text"
-        placeholder="*First Name"
+        placeholder="*Full Name"
         name="name"
         register={register}
         error={errors.name}
@@ -60,7 +63,11 @@ const ContactForm = () => {
       />
       <button
         type="submit"
-        className="bg-gradient-app h-[50px] text-white text-[20px] font-bold rounded-[10px] hover:bg-gradient-app-hover"
+        className={`${
+          isLoading
+            ? 'cursor-not-allowed bg-slate-900'
+            : 'bg-gradient-app hover:bg-gradient-app-hover'
+        } h-[50px] rounded-[10px] text-[20px] font-bold text-white`}
         disabled={isLoading}
       >
         {isLoading ? 'Sending...' : 'Send'}

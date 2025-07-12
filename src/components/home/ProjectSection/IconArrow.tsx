@@ -15,9 +15,9 @@ const IconArrow = () => {
         height="46"
         rx="23"
         stroke="#fff"
-        stroke-width="2"
+        strokeWidth="2"
       />
-      <g clip-path="url(#clip0_70_69)">
+      <g clipPath="url(#clip0_70_69)">
         <path
           d="M19.5325 31.8426L27.5475 23.8101L19.5325 15.7776L22 13.3101L32.5 23.8101L22 34.3101L19.5325 31.8426Z"
           fill="url(#paint1_linear_70_69)"
@@ -32,8 +32,8 @@ const IconArrow = () => {
           y2="24"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#fff" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#fff" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_70_69"
@@ -43,8 +43,8 @@ const IconArrow = () => {
           y2="23.8101"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#fff" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#fff" />
         </linearGradient>
         <clipPath id="clip0_70_69">
           <rect

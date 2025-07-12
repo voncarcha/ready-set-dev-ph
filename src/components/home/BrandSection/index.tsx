@@ -11,7 +11,7 @@ import {
 
 const BrandSection = () => {
   return (
-    <article className="relative bg-primary px-[15px] pt-[50px] pb-[100px]">
+    <article className="relative bg-primary px-[15px] pt-[50px] pb-[100px] overflow-hidden">
       <section className="mx-auto max-w-[1200px]">
         <header className="relative flex flex-col items-center justify-center text-center">
           <span className="absolute left-[50%] top-[-30px] translate-x-[-50%]">

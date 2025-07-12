@@ -3,28 +3,28 @@ export const SERVICES = [
     id: 1,
     title: 'Web Strategy & Planning',
     description:
-      'We build modern, responsive websites that are fast, secure, and easy to use.',
+      'We map out your goals, audience, and functionality to build a roadmap that sets your site up for success.',
     image: '/images/home/service-icon-2.png',
   },
   {
     id: 2,
     title: 'Branding & Identity',
     description:
-      'We build modern, responsive websites that are fast, secure, and easy to use.',
+      'We craft a visual identity that reflects your brand’s personality — from logos to tone, colors to consistency.',
     image: '/images/home/service-icon-1.png',
   },
   {
     id: 3,
     title: 'Web Design & Development',
     description:
-      'We build modern, responsive websites that are fast, secure, and easy to use.',
+      'We design sleek, responsive websites and bring them to life with clean, scalable code.',
     image: '/images/home/service-icon-5.png',
   },
   {
     id: 4,
     title: 'Launch & Maintenance',
     description:
-      'We build modern, responsive websites that are fast, secure, and easy to use.',
+      'From go-live to ongoing support, we ensure your site stays fast, secure, and up to date.',
     image: '/images/home/service-icon-4.png',
   },
 ];

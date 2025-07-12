@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import Logo from '../Logo';
-import MenuIcon from './MenuIcon';
 import useGlobalStore from '@/hooks/useGlobalStore';
 import Link from 'next/link';
+import Sidenav from './Sidenav';
+import { IconMenuOpen } from './Icons';
 
 const TopNav = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -33,9 +34,10 @@ const TopNav = () => {
           <Logo />
         </Link>
         <button onClick={() => setNavOpen(!isNavOpen)} className="block mr-[40px]">
-          <MenuIcon />
+          <IconMenuOpen />
         </button>
       </section>
+      <Sidenav />
     </nav>
   );
 };

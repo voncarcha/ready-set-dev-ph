@@ -13,7 +13,7 @@ const ProjectSection = () => {
   const displayedProjects = showAllProjects ? PROJECTS : PROJECTS.slice(0, 2);
 
   return (
-    <article className="bg-primary py-[100px]">
+    <article className="bg-primary py-[100px] px-[15px] overflow-hidden" id="projects">
       <section className="mx-auto max-w-[1200px]">
         <header className="relative mb-[50px] flex flex-col items-center justify-center text-center">
           <span className="absolute left-[50%] top-[-30px] translate-x-[-50%]">
@@ -27,7 +27,7 @@ const ProjectSection = () => {
             </h2>
           </section>
         </header>
-        <ul className="mb-[40px] grid grid-cols-2 gap-[20px]">
+        <ul className="mb-[40px] grid grid-cols-1 md:grid-cols-2 gap-[20px]">
           {displayedProjects.map((project) => (
             <li key={project.id} className="group relative">
               <section className="relative overflow-hidden rounded-[15px] bg-neutral-700">
@@ -46,7 +46,7 @@ const ProjectSection = () => {
                     rel="noopener noreferrer"
                     title="Visit Site"
                     aria-label="Visit Site"
-                    className="hover:bg-gradient-app-hover bg-gradient-app mx-auto flex w-[350px] items-center justify-center gap-[10px] rounded-full px-[40px] py-[20px] text-center text-white"
+                    className="hover:bg-gradient-app-hover bg-gradient-app mx-auto flex w-[280px] md:w-[350px] items-center justify-center gap-[10px] rounded-full px-[40px] py-[20px] text-center text-white"
                   >
                     <span className="text-[20px] font-bold">
                       {project.name}

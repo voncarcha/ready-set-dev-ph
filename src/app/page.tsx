@@ -5,6 +5,7 @@ import ServicesSection from '@/components/home/ServicesSection';
 import WhoWeAreSection from '@/components/home/WhoWeAreSection';
 import ProjectSection from '@/components/home/ProjectSection';
 import ContactSection from '@/components/home/ContactSection';
+import FooterSection from '@/components/global/FooterSection';
 
 const TopNav = dynamic(() => import('@/components/global/TopNav'), {
   ssr: false,
@@ -17,9 +18,10 @@ export default function Home() {
       <HeaderSection />
       <BrandSection />
       <WhoWeAreSection />
-      <ServicesSection />
       <ProjectSection />
+      <ServicesSection />
       <ContactSection />
+      <FooterSection />
     </main>
   );
 }

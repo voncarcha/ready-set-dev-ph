@@ -8,7 +8,7 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    name: 'Andrea Menelaou LLC',
+    name: 'Menelaou Law',
     image: '/images/home/bg-proj-law.png',
     services: ['Web Development', 'UI/UX Design'],
     link: 'https://menelaou-law.com/',

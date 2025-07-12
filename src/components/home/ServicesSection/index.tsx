@@ -6,7 +6,7 @@ import { SERVICES } from './constants';
 
 const ServicesSection = () => {
   return (
-    <article className="bg-primary py-[100px]">
+    <article className="overflow-hidden bg-primary py-[50px] md:py-[100px] " id="services">
       <section className="mx-auto max-w-[1200px]">
         <header className="relative mb-[50px] flex flex-col items-center justify-center text-center">
           <span className="absolute left-[50%] top-[-30px] translate-x-[-50%]">
@@ -19,9 +19,9 @@ const ServicesSection = () => {
             </h2>
           </section>
         </header>
-        <section className="flex gap-[50px] pt-[50px]">
+        <section className="flex flex-col gap-[50px] pt-[50px] lg:flex-row">
           <aside className="flex-1">
-            <picture>
+            <picture className="flex items-center justify-center">
               <Image
                 src="/images/home/services.png"
                 alt="Service 1"
@@ -30,9 +30,12 @@ const ServicesSection = () => {
               />
             </picture>
           </aside>
-          <ul className="flex-1">
+          <ul className="flex-1 px-[15px] text-center md:text-left">
             {SERVICES.map((service) => (
-              <li key={service.id} className="flex gap-[30px] items-center px-[30px] py-[25px] bg-[#292738] rounded-lg mb-[20px]">
+              <li
+                key={service.id}
+                className="mb-[20px] flex flex-col items-center gap-[10px] rounded-lg bg-[#292738] px-[30px] py-[25px] md:flex-row md:gap-[30px]"
+              >
                 <picture className="block">
                   <Image
                     src={service.image}
@@ -42,12 +45,10 @@ const ServicesSection = () => {
                   />
                 </picture>
                 <div className="flex-1">
-                  <h3 className="text-white font-semibold text-lg mb-[8px]">
+                  <h3 className="mb-[8px] text-lg font-semibold text-white">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 text-sm">
-                    {service.description}
-                  </p>
+                  <p className="text-sm text-gray-300">{service.description}</p>
                 </div>
               </li>
             ))}
