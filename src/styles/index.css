@@ -11,8 +11,8 @@
     scroll-padding-top: 90px;
   }
   body {
-    background-color: #fff;
-    color: #333;
+    background-color: #000a1d;
+    color: #fff;
     font-family: var(--font-poppins);
   }
   textarea:focus,
