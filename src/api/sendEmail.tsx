@@ -17,7 +17,7 @@ export default async function sendEmail(contactFormData: ContactFormData) {
   try {
     const response = await resend.emails.send({
       from: 'ReadySetDev <onboarding@resend.dev>',
-      to: ['voncarcha@gmail.com', 'hello.maplrcarcha@gmail.com'],
+      to: ['voncarcha@gmail.com'],
       subject: 'Contact Form Submission',
       html: `
         <p><strong>Name:</strong> ${contactFormData.name}</p>
@@ -32,9 +32,7 @@ export default async function sendEmail(contactFormData: ContactFormData) {
       success: true,
     };
   } catch (error: any) {
-    console.log(error);
     if (error.response.data.error.message) {
-      console.log(error.response);
       return {
         message: `Something went wrong. Please try again later. Thank you!`,
         success: false,
