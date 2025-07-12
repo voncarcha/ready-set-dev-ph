@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Title',
-  description: 'Description',
+  title: 'Ready Set Dev PH',
+  description: 'Qui veniam pariatur non consectetur. Consequat mollit elit velit in cillum reprehenderit ea. Mollit in eiusmod dolore aliquip consectetur. ',
 };
 
 export default function RootLayout({

@@ -1,18 +1,18 @@
 import React from 'react';
-import WhoBg from './WhoBg';
 import WaveLine from '@/components/global/WaveLine';
 import Image from 'next/image';
+import SvgBackground from './SvgBackground';
 
 const Who = () => {
   return (
     <article className="w-full bg-primary px-[15px] py-[50px]">
       <section className="mx-auto flex max-w-[1200px] items-center justify-between">
-        <header className="relative pl-[30px] pt-[30px]">
-          <span className="absolute left-0 top-0">
-            <WhoBg />
+        <header className="relative">
+          <span className="absolute left-[-30px] top-[-30px]">
+            <SvgBackground />
           </span>
           <WaveLine />
-          <h2 className="max-w-[700px] text-[40px] font-medium leading-tight text-white">
+          <h2 className="max-w-[700px] text-[40px] font-bold leading-tight text-white">
             We’re Awards Winning Modern Business Solutions Agency
           </h2>
           <p className="max-w-[700px] text-[20px] text-white mt-[20px]">

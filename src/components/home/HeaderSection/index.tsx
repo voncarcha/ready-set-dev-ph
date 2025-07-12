@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <header className="min-h-[800px] relative flex px-[15px] w-full items-center justify-center bg-secondary bg-[url('/images/home/grid.png')] bg-cover bg-center bg-no-repeat">
-      <article className="relative z-20 flex items-center justify-center gap-[50px]">
-        <section className='max-w-[600px]'>
-          <h1 className="text-data-shadow leading-[1.1] text-[120px] font-semibold text-white" data-shadow="Lorem Ipsum Dolor Sit">
-            Lorem Ipsum Dolor Sit 
+    <header className="min-h-[900px] relative flex px-[15px] w-full justify-center bg-secondary bg-[url('/images/home/grid.png')] bg-cover bg-center bg-no-repeat">
+      <article className="relative z-20 flex items-center justify-center gap-[50px] max-w-[1200px] mx-auto ">
+        <section className='max-w-[500px]'>
+          <h1 className="text-data-shadow leading-[1.1] text-[90px] font-semibold text-white" data-shadow="Coding Saves Lives">
+            Coding Saves Lives
           </h1>
-          <p className="text-white">
+          <p className="text-white text-[24px] mt-[10px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </section>
