@@ -5,13 +5,25 @@ import { ContactFormData, ContactFormSchema } from '@/types';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function sendEmail(contactFormData: ContactFormData) {
+type EmailResponse = {
+  message: string;
+  success: boolean;
+  data?: any;
+};
+
+const DEFAULT_ERROR_MESSAGE = 'Something went wrong. Please try again later. Thank you!';
+
+const createResponse = (message: string, success: boolean, data?: any): EmailResponse => ({
+  message,
+  success,
+  data
+});
+
+export default async function sendEmail(contactFormData: ContactFormData): Promise<EmailResponse> {
   const validatedSchema = ContactFormSchema.safeParse(contactFormData);
 
   if (!validatedSchema.success) {
-    return {
-      message: `Something went wrong.`,
-    };
+    return createResponse(DEFAULT_ERROR_MESSAGE, false);
   }
 
   try {
@@ -26,21 +38,12 @@ export default async function sendEmail(contactFormData: ContactFormData) {
       `,
     });
 
-    return {
-      message: 'Message Sent. Thank you!',
-      data: response.data,
-      success: true,
-    };
-  } catch (error: any) {
-    if (error.response.data.error.message) {
-      return {
-        message: `Something went wrong. Please try again later. Thank you!`,
-        success: false,
-      };
+    if (response.error) {
+      return createResponse(DEFAULT_ERROR_MESSAGE, false);
     }
-    return {
-      message: `Something went wrong. Please try again later. Thank you!`,
-      success: false,
-    };
+
+    return createResponse('Message Sent. Thank you!', true, response.data);
+  } catch (error: any) {
+    return createResponse(DEFAULT_ERROR_MESSAGE, false);
   }
 }
