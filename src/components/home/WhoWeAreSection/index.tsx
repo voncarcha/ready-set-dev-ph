@@ -20,13 +20,13 @@ const Who = () => {
           </h2>
 
           <p className="mt-[20px] max-w-[700px] text-[20px] text-white">
-            We’re a lean collective of designers and developers who believe in
-            doing things differently. No middle layers, no fluff—just direct
+            We’re a lean collective built around the belief that great work
+            doesn’t need middle layers or unnecessary fluff, just direct
             collaboration between clients and the people building their
             products.
           </p>
           <p className="mt-[20px] max-w-[700px] text-[20px] text-white">
-            Led by{' '}
+            At the core is{' '}
             <a
               href="https://voncarcha.vercel.app/"
               target="_blank"
@@ -35,10 +35,14 @@ const Who = () => {
             >
               Von Carcha
             </a>
-            , a front-end developer and web designer with 10+ years of
-            experience in React, Next.js, WordPress, and UI/UX, we deliver
-            clean, responsive, and user-focused solutions. Supporting client
-            relationships is{' '}
+            , a web developer and web designer with over a decade of
+            experience in React, Next.js, WordPress, and UI/UX. Von’s background
+            in both design and development allows him to translate ideas into
+            clean, responsive, and user-focused solutions that balance
+            creativity with technical precision.
+          </p>
+          <p className="mt-[20px] max-w-[700px] text-[20px] text-white">
+            Alongside him is{' '}
             <a
               href="https://www.linkedin.com/in/hellomaplrcarcha/"
               target="_blank"
@@ -47,8 +51,12 @@ const Who = () => {
             >
               Maria Carcha
             </a>
-            , our Client Success Manager, ensuring smooth communication and
-            successful outcomes.
+            , our Client Success Manager, who makes sure every project feels
+            effortless for our clients. From the first conversation to project
+            delivery, Maria ensures clear communication, smooth coordination,
+            and a genuinely enjoyable working relationship. She’s the bridge
+            that keeps projects aligned with client goals while making the
+            entire process stress-free.
           </p>
           <p className="mt-[20px] max-w-[700px] text-[20px] text-white">
             Together, we bridge the gap between design, development, and client
